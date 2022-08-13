@@ -23,7 +23,7 @@ const routes = [
     component: EditPainting,
   },
   {
-    path: "/paintings",
+    path: "/paintings/add",
     name: "add",
     component: CreatePainting,
   },

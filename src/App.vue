@@ -10,7 +10,7 @@
           <router-link to="/paintings" class="nav-link">Paintings</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/paintings" class="nav-link">New Painting</router-link>
+          <router-link to="/paintings/add" class="nav-link">New Painting</router-link>
         </li>
       </div>
     </nav>

@@ -75,14 +75,14 @@ export default {
     };
   },
   created() {
-    let apiURL = `https://painting-diamonds.herokuapp.com/paintings/${this.painting.id}`;
+    let apiURL = `https://painting-diamonds.herokuapp.com/paintings/${this.paintings.id}`;
     axios.get(apiURL).then((res) => {
       this.paintings = res.data;
     });
   },
   methods: {
     handleUpdateForm() {
-      let apiURL = `https://painting-diamonds.herokuapp.com/paintings/${this.paintings.params._id}`;
+      let apiURL = `https://painting-diamonds.herokuapp.com/paintings/${this.paintings.id}`;
       axios
         .put(apiURL, this.painting)
         .then((res) => {

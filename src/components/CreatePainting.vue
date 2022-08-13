@@ -74,7 +74,6 @@ export default {
   data() {
     return {
       painting: {
-        id: null,
         title: "",
         image: "",
         description: "",
