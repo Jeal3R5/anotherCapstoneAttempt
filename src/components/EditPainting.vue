@@ -50,13 +50,14 @@
           />
         </div>
         <div>
-          <button class="form-group mt-3">
+          <!-- <button class="form-group mt-3">
             <button
               class="btn btn-primary"
               type="submit"
               value="Submit"
             />Submit
-          </button>
+          </button> -->
+          <button @click="savePainting" class="btn btn-success">Submit</button>
         </div>
       </form>
     </div>
@@ -65,6 +66,8 @@
 
 <script>
 import axios from "axios";
+import PaintingDataService from '../services/PaintingDataService';
+
 export default {
   data() {
     return {
