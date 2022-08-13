@@ -4,6 +4,7 @@ import ListPaintings from "./components/ListPaintings.vue";
 import EditPainting from "./components/EditPainting.vue";
 import CreatePainting from "./components/CreatePainting.vue";
 import Painting from "./components/Painting.vue";
+import DeletePainting from "./components/DeletePainting.vue";
 
 const routes = [
   {
@@ -17,19 +18,24 @@ const routes = [
     component: ListPaintings,
   },
   {
-    path: "/edit",
+    path: "/paintings/:id",
     name: "edit",
     component: EditPainting,
   },
   {
-    path: "/add",
+    path: "/paintings",
     name: "add",
     component: CreatePainting,
   },
   {
-    path: "/painting/:id",
+    path: "/paintings/:id",
     name: "show",
     component: Painting,
+  },
+  {
+    path: "/paintings/:id",
+    name: "delete",
+    component: DeletePainting,
   },
 ];
 

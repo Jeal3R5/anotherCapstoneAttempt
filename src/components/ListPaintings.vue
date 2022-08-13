@@ -37,16 +37,16 @@
       <div v-if="currentPainting">
         <h4>Painting</h4>
         <div>
+        
           <label><strong>Title:</strong></label> {{ currentPainting.Title }}
         </div>
         <div>
           <label><strong>Image:</strong></label> {{ currentPainting.Image }}
         </div>
         <router-link
-          :to="'/paintings/' + currentPainting.id"
-          class="badge-warning"
-          >Edit</router-link
-        >
+          :to="'/paintings/' + currentPainting._id"
+          class="badge-warning">Edit
+          </router-link>
       </div>
       <div v-else>
         <br />

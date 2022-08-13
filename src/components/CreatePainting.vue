@@ -70,7 +70,7 @@
 import PaintingDataService from "../services/PaintingDataService";
 
 export default {
-  name: "add-painting",
+  name: "",
   data() {
     return {
       painting: {
@@ -87,10 +87,11 @@ export default {
   methods: {
     savePainting() {
       const data = {
+        id: this.painting.id,
         Title: this.painting.title,
         Image: this.painting.image,
         Description: this.painting.description,
-        Available: this.painting.availableForPurchase,
+        Available: this.painting.AvailableForPurchase,
         Price: this.painting.price,
       };
       PaintingDataService.create(data)

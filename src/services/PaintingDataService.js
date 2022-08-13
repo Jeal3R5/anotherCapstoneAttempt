@@ -13,7 +13,7 @@ class PaintingDataService {
   }
 
   update(id, data) {
-    return http.put(`/${id}`, data);
+    return http.put(`/edit/${id}`, data);
   }
 
   delete(id) {

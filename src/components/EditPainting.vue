@@ -50,13 +50,13 @@
           />
         </div>
         <div>
-          <!-- <button class="form-group mt-3">
+          <button class="form-group mt-3">
             <button
               class="btn btn-primary"
               type="submit"
               value="Submit"
             />Submit
-          </button> -->
+          </button>
           <button @click="savePainting" class="btn btn-success">Submit</button>
         </div>
       </form>
@@ -75,19 +75,19 @@ export default {
     };
   },
   created() {
-    let apiURL = `https://painting-diamonds.herokuapp.com/paintings/${this.$route.params.id}`;
+    let apiURL = `https://painting-diamonds.herokuapp.com/paintings/${this.painting.id}`;
     axios.get(apiURL).then((res) => {
       this.paintings = res.data;
     });
   },
   methods: {
     handleUpdateForm() {
-      let apiURL = `https://painting-diamonds.herokuapp.com/paintings/${this.$route.params.id}`;
+      let apiURL = `https://painting-diamonds.herokuapp.com/paintings/${this.paintings.params._id}`;
       axios
         .put(apiURL, this.painting)
         .then((res) => {
           console.log(res);
-          this.$router.push("/paintings");
+          this.$router.push("/");
         })
         .catch((error) => {
           console.log(error);
