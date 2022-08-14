@@ -47,6 +47,9 @@
           :to="'/paintings/edit/' + currentIndex"
           class="badge-warning">Edit
           </router-link>
+        <router-link
+          :to="'/paintings/delete/' +currentIndex"
+          class="badge-warning">Delete</router-link>
       </div>
       <div v-else>
         <br />

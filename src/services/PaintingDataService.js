@@ -17,7 +17,7 @@ class PaintingDataService {
   }
 
   delete(id) {
-    return http.delete(`/${id}`, data);
+    return http.delete(`/delete/${id}`);
   }
 
   findByTitle(title) {
