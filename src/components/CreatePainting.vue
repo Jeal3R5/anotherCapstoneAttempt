@@ -15,7 +15,7 @@
       <div class="form-group">
         <label for="image">Image goes here</label>
         <input
-          type="image"
+          type="text"
           class="form-control"
           id="image"
           v-model="painting.image"
@@ -86,13 +86,18 @@ export default {
   methods: {
     savePainting() {
       const data = {
-        id: this.painting.id,
         Title: this.painting.title,
         Image: this.painting.image,
         Description: this.painting.description,
         Available: this.painting.AvailableForPurchase,
         Price: this.painting.price,
       };
+       if (data.AvailableForPurchase === "false") {
+        data.AvailableForPurchase = false
+      } else {
+        data.AvailableForPurchase = true
+      }
+
       PaintingDataService.create(data)
         .then((response) => {
           this.painting.id = response.data.id;

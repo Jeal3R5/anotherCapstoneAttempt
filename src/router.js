@@ -18,7 +18,7 @@ const routes = [
     component: ListPaintings,
   },
   {
-    path: "/paintings/:id",
+    path: "/paintings/edit/:id",
     name: "edit",
     component: EditPainting,
   },
@@ -33,7 +33,7 @@ const routes = [
     component: Painting,
   },
   {
-    path: "/paintings/:id",
+    path: "/paintings/delete/:id",
     name: "delete",
     component: DeletePainting,
   },

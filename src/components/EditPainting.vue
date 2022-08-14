@@ -1,4 +1,4 @@
-<!-- <template>
+<template>
   <div class="row justify-content-center">
     <div class="col-md-6">
       <h1>Edit Painting</h1>
@@ -35,7 +35,7 @@
           <input
             type="text"
             class="form-control"
-            v-model="paintings.Available"
+            v-model="paintings.AvailableForPurchase"
             required
           />
         </div>
@@ -56,7 +56,7 @@
               value="Submit"
             />Submit
           </button>
-          <!-- <button @click="savePainting" class="btn btn-success">Submit</button> -->
+           <button @click="savePainting" class="btn btn-success">Submit</button>
         </div>
       </form>
     </div>
@@ -74,7 +74,7 @@ export default {
     };
   },
   created() {
-    let apiURL = `https://painting-diamonds.herokuapp.com/paintings/${this.paintings.id}`;
+    let apiURL = `https://painting-diamonds.herokuapp.com/paintings/${this.$route.params.id}`;
     axios.get(apiURL).then((res) => {
       console.log("res.data", res.data)
       this.paintings = res.data;
@@ -82,10 +82,15 @@ export default {
   },
   methods: {
     handleUpdateForm() {
-      let apiURL = `https://painting-diamonds.herokuapp.com/paintings/${this.paintings.id}`;
-    
-     axios
-        .put(apiURL, this.data)
+      if (this.paintings.AvailableForPurchase === "false") {
+        this.paintings.AvailableForPurchase = false
+      } else {
+        this.paintings.AvailableForPurchase = true
+      }
+
+      let apiURL = `https://painting-diamonds.herokuapp.com/paintings/${this.paintings._id}`;
+      axios
+        .put(apiURL, this.paintings)
         .then((res) => {
           console.log(res);
           this.$router.push("/");
@@ -95,5 +100,9 @@ export default {
         });
     },
   },
+  props: [
+    "id"
+  ]
 };
-</script> -->
+</script>
+

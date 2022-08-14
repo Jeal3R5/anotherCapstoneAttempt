@@ -8,7 +8,7 @@
           type="text"
           class="form-control"
           id="title"
-          v-model="this.paintings.Title"
+          v-model="currentPainting.Title"
         />
       </div>
       <div class="form-group">

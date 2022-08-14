@@ -27,7 +27,7 @@
           :class="{ active: index == currentIndex }"
           v-for="(painting, index) in paintings"
           :key="index"
-          @click="setActivePainting(painting, index)"
+          @click="setActivePainting(painting, painting._id)"
         >
           {{ painting.Title }}
         </li>
@@ -44,7 +44,7 @@
           <label><strong>Image:</strong></label> {{ currentPainting.Image }}
         </div>
         <router-link
-          :to="'/paintings/' + currentPainting._id"
+          :to="'/paintings/edit/' + currentIndex"
           class="badge-warning">Edit
           </router-link>
       </div>
