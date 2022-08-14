@@ -1,7 +1,6 @@
-<template>
+<!-- <template>
   <div class="row justify-content-center">
     <div class="col-md-6">
-      <!-- edit here -->
       <h1>Edit Painting</h1>
       <form @submit.prevent="handleUpdateForm">
         <div class="form-group">
@@ -51,13 +50,13 @@
         </div>
         <div>
           <button class="form-group mt-3">
-            <button
+            <button 
               class="btn btn-primary"
               type="submit"
               value="Submit"
             />Submit
           </button>
-          <button @click="savePainting" class="btn btn-success">Submit</button>
+          <!-- <button @click="savePainting" class="btn btn-success">Submit</button> -->
         </div>
       </form>
     </div>
@@ -77,14 +76,16 @@ export default {
   created() {
     let apiURL = `https://painting-diamonds.herokuapp.com/paintings/${this.paintings.id}`;
     axios.get(apiURL).then((res) => {
+      console.log("res.data", res.data)
       this.paintings = res.data;
     });
   },
   methods: {
     handleUpdateForm() {
       let apiURL = `https://painting-diamonds.herokuapp.com/paintings/${this.paintings.id}`;
-      axios
-        .put(apiURL, this.painting)
+    
+     axios
+        .put(apiURL, this.data)
         .then((res) => {
           console.log(res);
           this.$router.push("/");
@@ -95,4 +96,4 @@ export default {
     },
   },
 };
-</script>
+</script> -->
