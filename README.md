@@ -1,7 +1,40 @@
-# Vue 3 + Vite
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+#Welcome to Painting Diamonds
 
-## Recommended IDE Setup
+Intro: A place for one to create, view, update, and delete their very own Diamond Painting Collection.
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+Creator: Joan Renfroe
+
+INSERT SCREENSHOT OF APP
+
+Technology Used:
+
+* Express
+* HTML
+* CSS
+* Javascript
+* Mongoose
+* MongoDB
+* Heroku
+* Netlify
+* Vue
+* cors
+* Morgan
+* Nodemon
+* dotenv
+* GitHub
+* VS Code
+* Miro
+
+
+Miro Board: To see my user stories, wireframes and more, please follow the link https://miro.com/app/board/uXjVOgtg1J4=/?share_link_id=766541820423
+
+Backend: Heroku https://git.heroku.com/painting-diamonds.git
+
+Live Site: Netlify https://painting-diamonds-jr.netlify.app
+
+
+Future Enhancements:
+Add auth
+Add shopping cart functionality
+Add a page for requests
