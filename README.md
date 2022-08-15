@@ -1,5 +1,4 @@
-
-#Welcome to Painting Diamonds
+# Welcome to Painting Diamonds
 
 Intro: A place for one to create, view, update, and delete their very own Diamond Painting Collection.
 
@@ -35,6 +34,6 @@ Live Site: Netlify https://painting-diamonds-jr.netlify.app
 
 
 Future Enhancements:
-Add auth
-Add shopping cart functionality
-Add a page for requests
+* Add auth
+* Add shopping cart functionality
+* Add a page for requests
