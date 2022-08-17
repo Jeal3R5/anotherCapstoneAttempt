@@ -41,7 +41,7 @@
           <label><strong>Title:</strong></label> {{ currentPainting.Title }}
         </div>
         <div>
-          <label><strong>Image:</strong></label> {{ currentPainting.Image }}
+          <label><strong>Image:</strong></label> <img src="{{ currentPainting.Image }}" />
         </div>
         <router-link
           :to="'/paintings/edit/' + currentIndex"
