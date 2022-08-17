@@ -89,13 +89,13 @@ export default {
         Title: this.painting.title,
         Image: this.painting.image,
         Description: this.painting.description,
-        Available: this.painting.AvailableForPurchase,
+        Available: this.painting.available,
         Price: this.painting.price,
       };
-       if (data.AvailableForPurchase === "false") {
-        data.AvailableForPurchase = false
+       if (data.Available === "false") {
+        data.Available = false
       } else {
-        data.AvailableForPurchase = true
+        data.Available = true
       }
 
       PaintingDataService.create(data)
