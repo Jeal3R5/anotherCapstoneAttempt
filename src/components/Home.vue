@@ -10,4 +10,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+img {
+  border-radius: 75%
+}
+</style>
