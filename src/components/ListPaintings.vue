@@ -41,7 +41,7 @@
           <label><strong>Title:</strong></label> {{ currentPainting.Title }}
         </div>
         <div>
-          <label><strong>Image:</strong></label> <img src="{{ currentPainting.Image }}" />
+          <img v-bind:src="currentPainting.Image" />
         </div>
         <router-link
           :to="'/paintings/edit/' + currentIndex"
@@ -115,5 +115,10 @@ export default {
   text-align: center;
   max-width: 750px;
   margin: auto;
+}
+
+img {
+  height: 250px;
+  width: 250px;
 }
 </style>
