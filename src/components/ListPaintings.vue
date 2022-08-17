@@ -120,6 +120,7 @@ export default {
 img {
   height: 250px;
   width: 250px;
+  border-radius: 75%;
 }
 
 a {

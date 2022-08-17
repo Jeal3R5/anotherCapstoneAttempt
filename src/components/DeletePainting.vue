@@ -2,7 +2,7 @@
 <template>
     <div id="deletePainting">
         <h3>Are you sure you want to delete this painting??</h3>
-        <button class="badge badge-danger mr-2"
+        <button class="badge badge-danger mr-2 btn btn-dark"
       @click="deletePainting">Delete</button>
     </div>
 </template>
