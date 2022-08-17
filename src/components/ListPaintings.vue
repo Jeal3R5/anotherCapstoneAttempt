@@ -2,20 +2,20 @@
   <div class="list row">
     <div class="col-md-8">
       <div class="input-group mb-3">
-        <input
+        <!-- <input
           type="text"
           class="form-control"
           placeholder="Search by title"
           v-model="title"
-        />
+        /> -->
         <div class="input-group-append">
-          <button
+          <!-- <button
             class="btn btn-outline-secondary"
             type="button"
             @click="searchTitle"
           >
             Search
-          </button>
+          </button> -->
         </div>
       </div>
     </div>
@@ -120,5 +120,9 @@ export default {
 img {
   height: 250px;
   width: 250px;
+}
+
+a {
+  padding: 5px;
 }
 </style>
